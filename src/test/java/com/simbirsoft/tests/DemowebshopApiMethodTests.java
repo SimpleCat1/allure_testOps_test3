@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class DemowebshopApiMethodTests extends TestBase {
 
     @Severity(SeverityLevel.CRITICAL)
-    @Description("Проверяем api добавления товара")
+    @Description("staging")
     @Test
     @AllureId("12611")
     @DisplayName("Добавление товара")

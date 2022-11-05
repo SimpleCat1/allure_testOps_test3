@@ -23,8 +23,7 @@ public class GithubPageStepTests extends BasePageDemoQA {
     GithubPageData data = new GithubPageData();
 
     @Severity(SeverityLevel.CRITICAL)
-    @Description("Проверка номера Isseus в репозитории")
-    @Test
+    @Description("testing")
     @AllureId("12626")
     @DisplayName("Проверка номера Isseus в репозитории")
     @Tag("critical")
@@ -32,6 +31,7 @@ public class GithubPageStepTests extends BasePageDemoQA {
     @Feature("Проверка номера Isseus")
     @Epic("Неавторизованный пользователь")
     @Owner("SimplePerson")
+    @Test
     public void LookForIssuesSelenideSteps() {
         step("Зайти на \"" + data.url + "\"", () -> {
             steps.openPage(data.url);
