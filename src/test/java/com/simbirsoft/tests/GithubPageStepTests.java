@@ -28,10 +28,9 @@ public class GithubPageStepTests extends BasePageDemoQA {
     @Owner("SimplePerson")
     @Severity(SeverityLevel.CRITICAL)
     @Description("Проверка номера Isseus в репозитории")
-    @Test
-    @AllureId("12569")
     @DisplayName("Проверка номера Isseus в репозитории")
     @Tag("critical")
+    @Test
     public void LookForIssuesSelenideSteps() {
         step("Зайти на \"" + data.url + "\"", () -> {
             steps.openPage(data.url);
