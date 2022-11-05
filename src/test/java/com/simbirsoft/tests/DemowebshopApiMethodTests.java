@@ -2,6 +2,7 @@ package com.simbirsoft.tests;
 
 import com.simbirsoft.data.AddWishApiData;
 import com.simbirsoft.lombok.LombokUserData;
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -22,15 +23,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DemowebshopApiMethodTests extends TestBase {
 
-    @Epic("Неавторизованный пользователь")
-    @Feature("Добавление товара")
-    @Story("Добавление товара api")
-    @Owner("SimplePerson")
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Добавление товара")
     @Description("Проверяем api добавления товара")
-    @Tag("critical")
     @Test
+    @AllureId("12611")
+    @DisplayName("Добавление товара")
+    @Tag("critical")
+    @Story("Добавление товара api")
+    @Feature("Добавление товара")
+    @Epic("Неавторизованный пользователь")
+    @Owner("SimplePerson")
     void addingProductToTheCart() {
         step("Добавляем товар", () -> {
             AddWishApiData data = new AddWishApiData();

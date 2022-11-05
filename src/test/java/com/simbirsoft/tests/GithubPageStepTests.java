@@ -22,15 +22,16 @@ public class GithubPageStepTests extends BasePageDemoQA {
     PageDemoQASteps steps = new PageDemoQASteps();
     GithubPageData data = new GithubPageData();
 
-    @Epic("Неавторизованный пользователь")
-    @Feature("Проверка номера Isseus")
-    @Story("Проверка номера Isseus в репозитории")
-    @Owner("SimplePerson")
     @Severity(SeverityLevel.CRITICAL)
     @Description("Проверка номера Isseus в репозитории")
+    @Test
+    @AllureId("12626")
     @DisplayName("Проверка номера Isseus в репозитории")
     @Tag("critical")
-    @Test
+    @Story("Проверка номера Isseus в репозитории")
+    @Feature("Проверка номера Isseus")
+    @Epic("Неавторизованный пользователь")
+    @Owner("SimplePerson")
     public void LookForIssuesSelenideSteps() {
         step("Зайти на \"" + data.url + "\"", () -> {
             steps.openPage(data.url);
