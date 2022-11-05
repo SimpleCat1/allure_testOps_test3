@@ -14,6 +14,7 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import static com.simbirsoft.filters.CustomLogFilter.customLogFilter;
@@ -30,7 +31,7 @@ public class DemowebshopApiMethodTests extends TestBase {
     @Description("Проверяем api добавления товара")
     @AllureId("12611")
     @DisplayName("Добавление товара")
-    @Tag("critical")
+    @Tags({@Tag("staging"), @Tag("critical")})
     @Microservice("staging")
     @Story("Добавление товара api")
     @Feature("Добавление товара")

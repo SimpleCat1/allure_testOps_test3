@@ -29,12 +29,12 @@ public class GithubPageStepTests extends BasePageDemoQA {
     @Description("Проверка номера Isseus в репозитории")
     @AllureId("12626")
     @DisplayName("Проверка номера Isseus в репозитории")
-    @Tags({@Tag("api"), @Tag("critical")})
+    @Tags({@Tag("testing"), @Tag("critical")})
     @Story("Проверка номера Isseus в репозитории")
     @Feature("Проверка номера Isseus")
     @Epic("Неавторизованный пользователь")
     @Owner("SimplePerson")
-    @Microservice("staging")
+    @Microservice("testing")
     @Test
     public void LookForIssuesSelenideSteps() {
         step("Зайти на \"" + data.url + "\"", () -> {
