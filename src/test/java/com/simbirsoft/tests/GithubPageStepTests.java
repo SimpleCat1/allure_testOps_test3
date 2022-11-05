@@ -23,7 +23,7 @@ public class GithubPageStepTests extends BasePageDemoQA {
     GithubPageData data = new GithubPageData();
 
     @Severity(SeverityLevel.CRITICAL)
-    @Description("testing")
+    @Description("Проверка номера Isseus в репозитории")
     @AllureId("12626")
     @DisplayName("Проверка номера Isseus в репозитории")
     @Tag("critical")

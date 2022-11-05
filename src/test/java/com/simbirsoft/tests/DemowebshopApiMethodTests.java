@@ -24,8 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class DemowebshopApiMethodTests extends TestBase {
 
     @Severity(SeverityLevel.CRITICAL)
-    @Description("staging")
-    @Test
+    @Description("Проверяем api добавления товара")
     @AllureId("12611")
     @DisplayName("Добавление товара")
     @Tag("critical")
@@ -33,6 +32,7 @@ public class DemowebshopApiMethodTests extends TestBase {
     @Feature("Добавление товара")
     @Epic("Неавторизованный пользователь")
     @Owner("SimplePerson")
+    @Test
     void addingProductToTheCart() {
         step("Добавляем товар", () -> {
             AddWishApiData data = new AddWishApiData();
