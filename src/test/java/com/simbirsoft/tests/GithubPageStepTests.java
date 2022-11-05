@@ -1,5 +1,7 @@
 package com.simbirsoft.tests;
 
+import com.simbirsoft.config.Layer;
+import com.simbirsoft.config.Microservice;
 import com.simbirsoft.data.GithubPageData;
 import com.simbirsoft.page.BasePageDemoQA;
 import com.simbirsoft.page.PageDemoQASteps;
@@ -18,7 +20,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
-
+@Layer("web")
 public class GithubPageStepTests extends BasePageDemoQA {
     PageDemoQASteps steps = new PageDemoQASteps();
     GithubPageData data = new GithubPageData();
@@ -32,6 +34,7 @@ public class GithubPageStepTests extends BasePageDemoQA {
     @Feature("Проверка номера Isseus")
     @Epic("Неавторизованный пользователь")
     @Owner("SimplePerson")
+    @Microservice("staging")
     @Test
     public void LookForIssuesSelenideSteps() {
         step("Зайти на \"" + data.url + "\"", () -> {
