@@ -4,7 +4,13 @@ import com.simbirsoft.data.GithubPageData;
 import com.simbirsoft.page.BasePageDemoQA;
 import com.simbirsoft.page.PageDemoQASteps;
 import io.qameta.allure.AllureId;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -16,12 +22,16 @@ public class GithubPageStepTests extends BasePageDemoQA {
     PageDemoQASteps steps = new PageDemoQASteps();
     GithubPageData data = new GithubPageData();
 
-
+    @Epic("Неавторизованный пользователь")
+    @Feature("Проверка номера Isseus")
+    @Story("Проверка номера Isseus в репозитории")
+    @Owner("SimplePerson")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Проверка номера Isseus в репозитории")
     @Test
     @AllureId("12569")
     @DisplayName("Проверка номера Isseus в репозитории")
     @Tag("critical")
-    @Owner("allure8")
     public void LookForIssuesSelenideSteps() {
         step("Зайти на \"" + data.url + "\"", () -> {
             steps.openPage(data.url);
